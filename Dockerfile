@@ -22,5 +22,3 @@ RUN builddeps=' \
 		ansible \
 		six \
 	&& apk del --purge $builddeps
-
-#ENTRYPOINT [ "ansible" ]
