@@ -1,7 +1,10 @@
 FROM alpine:latest
 LABEL maintainer "Adrian Herrera <simplyadrian@gmail.com>"
 
-RUN builddeps=' \
+RUN rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/* &&\
+	apk update &&\
+	builddeps=' \
 		python-dev \
 		py2-pip \
 		musl-dev \
